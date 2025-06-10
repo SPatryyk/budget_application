@@ -27,7 +27,7 @@ export default defineConfig({
   server: {
     proxy: {
       '^/api': {
-        target: 'http://localhost:8000',
+        target: 'https://budget-application-hkvk.onrender.com:8000',
         changeOrigin: true
       }
     }
