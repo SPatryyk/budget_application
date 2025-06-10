@@ -17,21 +17,21 @@ export default {
     })
   },
   mounted() {
-    APICall('/wallets', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+    APICall('/wallets/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
             if (status != 200) {
             } else {
                 let bodyData = await body.json()
                 this.base.setWallets(bodyData.slice(0, 8))
             }
         })
-        APICall('/goals', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+        APICall('/goals/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
             if (status != 200) {
             } else {
                 let bodyData = await body.json()
                 this.base.setGoals(bodyData.slice(0, 8))
             }
         })
-        APICall('/transactions/categories', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+        APICall('/transactions/categories/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
             if (status != 200) {
                 //this.notifications.add('fas fa-exclamation-triangle', 'Wallets', bodyData[Object.keys(bodyData)[0]][0])
             } else {

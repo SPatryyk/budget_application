@@ -91,7 +91,7 @@ export default {
                 } else {
                     this.notification.add('fas fa-check', 'Form', 'Added new wallet.')
                     setTimeout(()=> {
-                        APICall('/wallets', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+                        APICall('/wallets/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
                             if (status != 200) {
                                 console.log(body);
                                 

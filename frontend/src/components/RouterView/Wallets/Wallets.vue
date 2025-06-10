@@ -58,7 +58,7 @@ export default {
                         setTimeout(()=>{
                             console.log('x');
                             
-                            APICall('/wallets', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+                            APICall('/wallets/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
                                 if (status != 200) {
                                     console.log(body);
                                     
@@ -90,7 +90,7 @@ export default {
                 setTimeout(()=>{
                     console.log('x');
                     
-                    APICall('/wallets', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+                    APICall('/wallets/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
                         if (status != 200) {
                             console.log(body);
                             
@@ -113,7 +113,7 @@ export default {
             notifications: useNotificationStorage()
         })
     }, mounted() {
-        APICall('/wallets', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
+        APICall('/wallets/', 'GET', {'Authorization': 'Bearer '+localStorage.getItem('access')}, false, async (status, body)=> {
             if (status != 200) {
                 console.log(body);
                 
