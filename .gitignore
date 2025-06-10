@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django cache
+*.log
+*.pot
+*.pyc
+
+# SQLite database
+# *.sqlite3
+
+# Django migrations
+*/migrations/*.py
+*/migrations/*.pyc
+
+# Media/uploads 
+media/
+
+# Static files (jeśli generowane automatycznie przez collectstatic)
+staticfiles/
+static/
+
+# Virtual environment
+env/
+venv/
+ENV/
+.VENV/
+
+# IDE files
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+backend/config/__pycache__/
