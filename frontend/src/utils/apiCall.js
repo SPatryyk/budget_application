@@ -1,4 +1,7 @@
 export async function APICall(url, method, headers, body, cb) {
+    if (!url.endsWith('/')) {
+        url = url + '/'
+    }
     let respContent = {}
     respContent.method = method
     if (headers) {
