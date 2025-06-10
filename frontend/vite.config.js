@@ -24,12 +24,12 @@ export default defineConfig({
     },
   },
   base: './',
-  server: {
-    proxy: {
-      '^/api': {
-        target: 'https://budget-application-hkvk.onrender.com:8000',
-        changeOrigin: true
-      }
-    }
-  }
+  // server: {
+  //   proxy: {
+  //     '^/api': {
+  //       target: 'https://budget-application-hkvk.onrender.com:8000',
+  //       changeOrigin: true
+  //     }
+  //   }
+  // }
 })

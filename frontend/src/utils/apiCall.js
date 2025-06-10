@@ -7,6 +7,6 @@ export async function APICall(url, method, headers, body, cb) {
     if (body) {
         respContent.body = body
     }
-    let response = await fetch('/api'+url, respContent)
+    let response = await fetch('https://budget-application-hkvk.onrender.com:8000/api'+url, respContent)
     cb(response.status, response)
 }
